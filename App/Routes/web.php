@@ -46,6 +46,14 @@ $router->post('/register', function () {
     echo json_encode($jsonArray);
 });
 
+
+$router->get('/pibe', function () {
+    $userModel = new \App\Models\UserModel();
+    dump($userModel->getAll());
+    echo "<pre>";
+    var_dump($userModel->getAll());
+});
+
 /* 
 // Rutas del post individual
 $router->get('/post(/\d+)', 'Post@show');

@@ -23,7 +23,7 @@ class Model
     protected function openDatabaseConnection()
     {
         $connection = new Connection(
-            'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_DATABASE'],
+            'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_DATABASE'].';charset=utf8',
             $_ENV['DB_USERNAME'],
             $_ENV['DB_PASSWORD']
         );
@@ -35,14 +35,14 @@ class Model
     {
         return $this->db->from($this->table)
                 ->select($columnas)
-                ->first();
+                ->all();
     }
 
     public function searchById(int $id, $columnas = array())
     {
         return $this->db->from($this->table)
                 ->where('id')->is($id)
-                ->select($columnas = array())
+                ->select($columnas)
                 ->first();
     }
 }
