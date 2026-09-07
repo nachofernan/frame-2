@@ -64,14 +64,6 @@ Nada, todo a mano, salvo las librerías que hicieron todo esto posible
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Bugs conocidos
-
-Al instalarlo, hay que borrar la carpeta de Symfony del vendor y meter en la consola:
-
-```
-composer update
-```
-
 ## ChangeLog
 
 - El Config/Model tiene clases de getAll y searchById para ser heredadas por todos los modelos

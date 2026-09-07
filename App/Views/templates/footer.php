@@ -2,7 +2,6 @@
 
 <footer class="footer mt-auto py-3">
     <div class="container">
-        <span class="text-muted">Proyecto interno - Datos del _SESSION</span><br><small><span class="small"><?php var_dump($_SESSION['user']->id); ?></span></small>
     </div>
 </footer>
 <script src="<?= $baseUrl ?>assets/js/jquery-3.5.1.slim.min.js"></script>
